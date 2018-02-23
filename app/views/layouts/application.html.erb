@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RSunTechnology</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+  <div class="container">
+    <div class="navbar-header"> 
+      <!-- Button for smallest screens -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <font color="red" size=20><h1><b>RSun</b> </font><font color="white" size=20>Technology</font></h1> </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li class="active"><a href="/rsun_technology/home">Home</a></li>
+        <li><a href="http://www.rubyonrailsonline.com">OnlineTraining</a></li>
+        <li><a href="/rsun_technology/services">Services</a></li>
+        <li><a href="/rsun_technology/about_us">About</a></li>
+
+        <li><a href="/rsun_technology/courses">Courses</a></li>
+
+        
+        <li><a href="/rsun_technology/contact_us">Contact</a></li>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+</div>
+<!-- /.navbar --> 
+
+<% if controller.action_name == "home" %>
+<!-- Header -->
+<header id="head">
+  <div class="container">
+    <div class="banner-content">
+      <div id="da-slider" class="da-slider">
+        <div class="da-slide">
+          <h2>We'll open the world of Tech Knowledge</h2>
+        
+          <p>RSun Technology is a leading IT Training Academy, building skilled Programmers/Developers for global industry requirements.</p>
+          <div class="da-img"></div>
+        </div>
+        <div class="da-slide">
+          <h2>Become a Ruby On Rails proffesional</h2>
+          <p>Our Highly qualified team will provide effective Training and Quality Stuff for the beginners,Professional Students or Developers.</p>
+          <div class="da-img"></div>
+        </div>
+        <div class="da-slide">
+          <h2>We are expect in corporate training</h2>
+          <p>We are providing Quality and effectiveTraining on Ruby on Rails Framework.We are the only one training Institute in Madurai for Ruby on Rails Course.</p>
+          <div class="da-img"></div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</header>
+<!-- /Header --> 
+<!-- Intro -->
+<section class="herotxt">
+<!--<div class="container text-center sectionBox">
+  <h2 >Welcome!</h2>
+  <p class="text-muted"> Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies<br/>
+    Sed elit imperdiet congue. Integer ultricies sed ligula eget tempus. </p>
+</div>-->
+  <div class="container sectionBox">
+<div class="row">
+                <div class="col-md-9">
+                    <span><strong style="color:#FFF317">"RSun Technology" </strong>RoR  Training Academy</span>
+                    <p>RSun Technology is a leading Training Academy, which was set up in 2010, has today grown to be the India's leading RoR Training Institute offering learning solutions to Individuals, Corporates and Institutions across India.</p>
+                </div>            
+                <div class="col-md-3 btn-download">
+                    <a href=/rsun_technology/about_us class="btn-u btn-u-lg"><i class="fa fa-cloud-download"></i> Learn More..</a>
+                </div>
+            </div>
+            </div>
+</section>
+
+
+<!-- /Intro--> 
+
+<!-- Highlights - jumbotron -->
+<div class="jumbotron sectionBox">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 highlight">
+        <div class="h-caption">
+          <h4><i class="fa fa-users fa-2x circle"></i>Who we are?</h4>
+        </div>
+        <div class="h-body">
+          <p>RSun Technology is a leading Training Academy, which was set up in 2010, has today grown to be the India's leading RoR Training Institute offering learning solutions to Individuals, Corporates and Institutions across India.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 highlight">
+        <div class="h-caption">
+          <h4><i class="fa fa-bar-chart-o fa-2x circle"></i>What We Provide?</h4>
+        </div>
+        <div class="h-body">
+          <p>We are specialist in - Online Training - Class Room Training - Corporate Training - Application Development - Final Year Projects for Professional Students - Project Training and more</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 highlight">
+        <div class="h-caption">
+          <h4><i class="fa fa-gears fa-2x circle"></i>Need RoR Help?</h4>
+        </div>
+        <div class="h-body">
+          <p>Visit out knowledgebase to get technical help.You can get help from our Technical consultant too.Feel free to send your queries/comments to us via email/call.We are providing 24 X 7 support for your enquires.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 highlight">
+        <div class="h-caption">
+          <h4><i class="fa fa-file-word-o fa-2x circle"></i>Why Ruby on Rails?</h4>
+        </div>
+        <div class="h-body">
+          <p>Many companies have asked the questions "What's the fastest way to develop my web apps?" and "Should I use Java, Ruby, Python or something else?" These companies range from start-ups to established enterprises, and many have come to the conclusion that when creating apps that are designed to be delivered on the web, Ruby on Rails is the best choice.</p>
+        </div>
+      </div>
+    </div>
+    <!-- /row  --> 
+    
+  </div>
+</div> 
+<% end %>
+<% if controller.action_name != "home"%>
+  <header id="head" class="secondary"></header>
+<% end %>
+<!-- container -->
+<section class="sectionBox">
+<div class="container"> 
+  <%=yield%>
+
+</div>
+</section>
+<footer id="footer" class="top-space">
+  <div class="footer1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 panel">
+          <h3 class="panel-title"></h3>
+          <div class="panel-body">
+            <p>All rights reserved</p>
+          </div>
+        </div>
+        <div class="col-md-4 panel contact">
+          <h3 class="panel-title">
+          Contact Info
+          </h4>
+          <div class="panel-body">
+            
+            <ul>
+            <li><i class="fa fa-phone"></i>Mobile: +91 89400 76124.<br>Office:    +91 98421 76124.</li>
+              <li><a href="#"><i class="fa fa-envelope-o"></i> E-mail:   rsuntechnology@gmail.com</a></li>
+              <li><i class="fa fa-flag"></i>Address: 155,NorthVeli Street,<br>
+              Madurai-625001,
+                TamilNadu,India</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 panel">
+          <h3 class="panel-title">Follow Us</h3>
+          <div class="panel-body">
+            <p class="follow-me-icons"> <a href="https://twitter.com/RsunTechnology"><i class="fa fa-twitter fa-2"></i></a><a href=""><i class="fa fa-github fa-2"></i></a> <a href="https://www.facebook.com/rubyonrailstraininginindia/"><i class="fa fa-facebook fa-2"></i></a> <a href="https://www.youtube.com/channel/UCeeJScgDhYGTGAUjAdylvjw?view_as=subscriber"><i class="fa fa-youtube fa-2"></i></a> <a href=""> </p>
+          </div>
+        </div>
+      </div>
+      <!-- /row of panels --> 
+    </div>
+  </div>
+  <div class="footer2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="simplenav"> <a href="rsun_technology/home">Home</a> | <a href="rsun_technology/about_us">About</a> | <a href="rsun_technology/services">Services</a> | <a href="rsun_technology/terms">OnlineTraining</a> | <a href="rsun_technology/contact_us">Contact</a> 
+            </p>
+
+          </div>
+        </div>
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="text-right"> Copyright © 2018 -   <a href="http://www.rsuntechnology.com" rel="develop">RSun Technology</a> </p>
+          </div>
+        </div>
+      </div>
+      <!-- /row of panels --> 
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster --> 
+<script src="assets/js/modernizr-latest.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> 
+<script src="assets/js/jquery.cslider.js"></script> 
+<script src="assets/js/headroom.min.js"></script> 
+<script src="assets/js/jQuery.headroom.min.js"></script> 
+<script src="assets/js/custom.js"></script>
+</body>
+</html>
